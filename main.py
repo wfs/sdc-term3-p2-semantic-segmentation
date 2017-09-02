@@ -240,8 +240,9 @@ def run():
 
         # TODO: Build NN using load_vgg, layers, and optimize function
 
-        epochs = 6  # road / not_road spread evenly across image aka garbage results!
-        #epochs = 55  # will try more training after this git push
+        #epochs = 6  # road / not_road spread evenly across image aka garbage results!
+        #epochs = 55  # OK results but seems loss may decrease even further with more epochs.
+        epochs = 89
         batch_size = 2
         learning_rate = tf.placeholder(tf.float32)
         correct_label = tf.placeholder(tf.int32, [None, None, None, num_classes])
